@@ -1,49 +1,71 @@
+/* Set default background and font for the page */
 body {
-    background-color: #f8f9fa;
-    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Light gray background */
+    font-family: Arial, sans-serif; /* Default font  */
 }
+
+/* Style the fluid container with a slightly darker gray background */
 .container-fluid {
-    background-color: #e9ecef;
-    padding-bottom: 20px;
+    background-color: #e9ecef; /* Medium gray background */
+    padding-bottom: 20px; /* spacing */
 }
+
+/* Give the header a purple background and padding */
 header {
-    background-color: #6c5ce7 !important;
-    padding: 30px 0 !important;
-    margin-bottom: 15px;
+    background-color: #6c5ce7 !important; /*  default to purple */
+    padding: 30px 0 !important; /* Vertical padding */
+    margin-bottom: 15px; /* Space below header */
 }
+
+/* Style sections with blue background, margins, and shadow */
 section {
-    background-color: #74b9ff !important;
+    background-color: #74b9ff !important; /* Light blue background, override default */
     margin: 10px 20px;
-    border-radius: 8px;
+    border-radius: 8px; /* Rounded corners */
     box-shadow: 5px 5px 10px #888888;
 }
+
+/* Define primary text color as bold blue */
 .text-primary {
-    color: #0984e3 !important;
-    font-weight: bold;
+    color: #0984e3 !important; /* Blue text */
+    font-weight: bold; /* Bold text */
 }
+
+/* Style horizontal rules with a thick blue border */
 hr.border-primary {
-    border-color: #0984e3 !important;
-    border-width: 2px;
+    border-color: #0984e3 !important; /* Blue border */
+    border-width: 2px; /* Thicker line */
 }
+
+/* Style tables with a light gray background and blue border */
 .table {
-    background-color: #dfe6e9;
-    border: 2px solid #0984e3;
+    background-color: #dfe6e9; /* Light gray background */
+    border: 2px solid #0984e3; /* Blue border */
 }
+
+/* Style table headers with purple background and centered white text */
 .table th {
-    background-color: #6c5ce7;
-    color: white;
-    text-align: center;
+    background-color: #6c5ce7; /* Purple  */
+    color: white; /* White  */
+    text-align: center; /* Centered text */
 }
+
+/* Style table cells with dark gray text and padding */
 .table td {
-    color: #2d3436;
-    padding: 8px;
+    color: #2d3436; /* Dark gray text */
+    padding: 8px; /*  padding */
 }
+
+/*  images scale with a purple border */
 img {
-    max-width: 100%;
-    height: auto;
-    border: 3px solid #6c5ce7;
+    max-width: 100%; /* Prevent overflow */
+    height: auto; /*  aspect ratio */
+    border: 3px solid #6c5ce7; /* Purple border */
 }
+
+/* Responsive adjustments for screens smaller than 460px */
 @media (max-width: 460px) {
+    /* Reset backgrounds to white and text to black  */
     section, header, .table, .table th, .table td {
         background-color: #ffffff !important;
         color: #000000 !important;
@@ -55,72 +77,88 @@ img {
         color: #0984e3 !important;
     }
 }
+
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     h1 {
-        font-size: 1.8rem;
+        font-size: 1.8rem; /* Smaller heading size */
     }
     h2 {
-        font-size: 1.2rem;
+        font-size: 1.2rem; /* Smaller subheading size */
     }
     section {
-        padding: 10px !important;
+        padding: 10px !important; /* Reduce padding  */
     }
-
 }
 
+/* Style header images with hover effects */
 header img.img-fluid {
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    border: 2px solid transparent;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for hover */
+    border: 2px solid transparent; /* Transparent border by default */
 }
 
+/* Apply hover effects */
 header img.img-fluid:hover {
-    transform: scale(1.1);
-    opacity: 0.9;
-    border-color: #6c5ce7;
+    transform: scale(1.1); /*  enlarge */
+    opacity: 0.9; /*  fade */
+    border-color: #6c5ce7; /* Purple border */
 }
+
+/* Flex container for logos*/
 .logo-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+    align-items: center; /* Vertically center items */
+    justify-content: center; /* Horizontally center items */
+    gap: 20px; /* Space between img */
 }
+
+/* Style logo images with a max height and hover  */
 .logo-img {
     max-height: 150px;
     width: auto;
     transition: transform 0.3s ease;
 }
+
+/* Enlarge logo images with hover */
 .logo-img:hover {
     transform: scale(1.1);
 }
 
+/* Style rounded images with border and hover effects */
 .img-fluid.rounded {
-    border: 3px solid #6c5ce7;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.img-fluid.rounded:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-.project-image-wrapper {
-    width: 100%;
-    max-width: 300px;
-    height: 200px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 3px solid #6c5ce7;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 3px solid #6c5ce7; /* Purple border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /*  transition */
 }
 
+/* Apply hover effects */
+.img-fluid.rounded:hover {
+    transform: scale(1.05); /*  enlarge */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /*  shadow */
+}
+
+/* Container for project images with fixed size and styling */
+.project-image-wrapper {
+    width: 100%; /* Full width of parent */
+    max-width: 300px; /*  width */
+    height: 200px; /*  height */
+    overflow: hidden; /* Manage overflowing content */
+    display: flex; /* Center image  */
+    align-items: center; /* Vertical center */
+    justify-content: center; /* Horizontal center */
+    border: 3px solid #6c5ce7; /*  border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /*  shadow */
+}
+
+/* Images fit the wrapper */
 .project-image-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+/* Apply hover effect to images */
 .project-image-wrapper img:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
+    transform: scale(1.05); /* enlarge */
+    transition: transform 0.3s ease; /* Smooth transition */
 }
